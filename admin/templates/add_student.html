@@ -1,0 +1,28 @@
+
+{% extends 'adding_form_template.html' %}
+
+{% block content  %}
+    <div class="student-head-form-container">
+        <div class="student-main-form-container">
+            <div class="student-main-form-container-text">
+                <h1>Register Students Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_student')}}" method="post" id="addStudent" class="add-student-form">
+                <input type="text" name="student_name" id="student_name" required placeholder="Student Name">
+                <input type="text" name="matric_num" id="matric_num" required placeholder="Matric Number">
+                <input type="tel" name="tel_num" id="tel_num" required placeholder="Phone Number">
+                <input type="email" name="email" id="email" required placeholder="Email">
+                <input type="text" name="department_id" id="department_id" required placeholder="Department Id">
+                <input type="text" name="level_id" id="level_id" required placeholder="Level">
+                <input type="hidden" name="student_image" id="student_image">
+                <div class="video-image-holder" id="video-image-holder">
+                    <video id="video" width="340" height="340" autoplay></video>
+                    <button id="capture-btn" type="button">Capture</button>
+                    <canvas id="canvas" width="340" height="340" style="display: none;"></canvas>
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+                <script src="{{url_for('admin.static', filename='js/student.js')}}"></script>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('admin.static', filename='css/admin_dashboard.css')}}">
+</head>
+<body>
+    <div class="content-holder">
+        <h1>This is the admin section of this application</h1>
+        <div class="content-link-holder">
+            <a href="{{url_for('admin.manage_faculty')}}"><div class="content-holder-card">
+                <p>Faculty</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_department')}}"><div class="content-holder-card">
+                <p>Department</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_programme')}}"><div class="content-holder-card">
+                <p>Programme</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_level')}}"><div class="content-holder-card">
+                <p>Level</p> 
+            </div></a>
+            <a href="{{url_for('admin.manage_session')}}"><div class="content-holder-card">
+                <p>Session</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_semester')}}"><div class="content-holder-card">
+                <p>Semester</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_courses')}}"><div class="content-holder-card">
+                <p>Courses</p>
+            </div></a>
+            <a href="{{url_for('admin.manage_classes')}}"><div class="content-holder-card">
+                <p>Classes</p>
+            </div></a>
+            <a href="{{url_for('admin.add_student')}}"><div class="content-holder-card">
+                <p>Add New Student</p>
+            </div></a>
+            <a href="{{url_for('admin.add_staff')}}"><div class="content-holder-card">
+                <p>Add New Staff</p>
+            </div></a>
+        </div>
+    </div>
+</body>
+</html>

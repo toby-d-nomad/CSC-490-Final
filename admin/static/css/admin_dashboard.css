@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    margin-top: 30px;
+}
+
+.content-holder h1{
+    font-family: monospace;
+    font-size: 48px;
+    color: #198754;
+}
+
+.content-link-holder{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-holder-card{
+    width: 250px;
+    height: 160px;
+    border: 1px solid #198754;
+    margin: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-link-holder a{
+    color: #198754;
+    text-decoration: none;
+}
+
+.content-holder-card p{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}

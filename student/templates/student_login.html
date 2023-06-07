@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('student.static', filename='css/login.css')}}">
+</head>
+<body>
+    <div class="full-body-screen">
+        <div class="full-body-screen-transbox">
+            <div class="login-form-holder">
+                <div class="student-login-form">
+                    <h1>Student Login</h1> 
+                    <form action="{{url_for('student.student_login')}}" method="post" id="studentLoginForm">
+                        <span>Email</span>
+                        <p><input type="email" name="email" id="email" required placeholder="Email"></p>
+                        <span>Password</span>
+                        <p><input type="password" name="student_password" id="student_password" required placeholder="Password"></p>
+                        <video id="video" width="180" height="200" autoplay></video>
+                        <div class="capturedImageHolder" id="capturedImageHolder" style="display: none;"></div>
+                        <input type="hidden" name="student_image" id="student_image">
+                        <button id="capture-btn" type="button">Capture Image</button>
+                        <canvas id="canvas" width="180" height="200" style="display: none;"></canvas>
+                        <button type="submit" id="submit-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('student.static', filename='js/studentAuth.js')}}"></script>
+</body>
+</html>

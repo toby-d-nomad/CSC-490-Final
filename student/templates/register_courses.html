@@ -1,0 +1,33 @@
+{% extends 'student_index.html' %}
+
+{% block title %}Register Courses{% endblock %}
+
+{% block content %}
+    {% if rows %}
+        {% for row in rows %}
+            <form action="{{url_for('student.register_courses')}}" method="post">
+                <div class="register-courses-form">
+                    <div class="course-details">
+                        <span id="span_course_id">{{row[0]}}</span>
+                        <input type="hidden" name="course_id" id="course_id" value="{{row[0]}}">
+                        <span>{{row.course_code}}</span>
+                        <span>{{row.course_name}}</span>
+                    </div>
+                    <div class="register-button">
+                        <button>Register</button>
+                    </div>
+                </div>
+            </form>
+        {% endfor %}
+    {% else %}
+        <div class="text-if-nothing">
+            <h1>You've Registered All Your Courses</h1>
+        </div>
+    {% endif %}
+    <script>
+        var course_id = document.getElementById('course_id')
+        var span_course_id = document.getElementById('span_course_id')
+        course_id.value = span_course_id.innerHTML
+        console.log(span_course_id.innerHTML)
+    </script>
+{% endblock %}

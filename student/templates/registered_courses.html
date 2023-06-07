@@ -1,0 +1,17 @@
+{% extends 'student_index.html' %}
+
+{% block title %}Registered Courses{% endblock %}
+
+{% block content %}
+    <div class="registered-course-holder">
+        <div class="registered-courses-content">
+            <h1>This the List of Courses You've Registered</h1>
+            {% for row in rows %}
+                <div class="registered-courses-div">
+                    <span class="code">{{row.course_code}}</span>
+                    <span>{{row.course_name}}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

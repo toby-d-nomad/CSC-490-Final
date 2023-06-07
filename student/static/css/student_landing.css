@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.landing-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    margin-top: 30px;
+}
+
+.major-container h1{
+    font-family: monospace;
+    font-size: 48px;
+    color: #198754;
+    text-align: center;
+}
+
+.container-link-holder{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-link-card{
+    width: 250px;
+    height: 160px;
+    border: 1px solid #198754;
+    margin: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-link-holder a{
+    color: #198754;
+    text-decoration: none;
+}
+
+.container-link-card span{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.registered-course-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registered-course-holder h1{
+    font-size: 56px;
+    font-family: monospace;
+    color: #198754;
+    margin-top: 60px;
+}
+
+
+.registered-courses-div{
+    margin: 30px 0;
+    padding: 10px 100px;
+    border-bottom: 2px solid #191919;
+    border-radius: 40px;
+}
+
+.registered-courses-div span{
+    font-size: 20px;
+    color: #198754;
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.registered-courses-div .code{
+    font-weight: bolder;
+}
+
+.text-if-nothing{
+    text-align: center;
+    font-family: monospace;
+    font-size: 26px;
+    margin: 60px;
+    color: #198754;
+}
+
+.classes-cards{
+    border: 2px solid #198754;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 35px;
+    padding: 0 20px;
+}
+
+.classes-content{
+    margin-top: 30px;
+}
+
+.classes-content-holder{
+    display: flex;
+    justify-content: center;
+}
+
+.classes-content h1{
+    color: #198754;
+    font-family: monospace;
+    font-size: 36px;
+    text-align: center;
+}
+
+.classes-cards{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c65113;
+}
+
+.classes-cards-holder{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.class-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.class-heading .code{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.class-heading .name{
+    text-align: right;
+
+}
+
+.class-date{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.class-timing{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.attend-class-button{
+    display: flex;
+    justify-content: end;
+}
+
+.attend-class-button button{
+    padding: 14px 22px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: whitesmoke;
+    background: #198754;
+    border: none;
+    cursor: pointer;
+}
+
+.attend-class-button a:hover{
+    transform: scale(1.07);
+}
+
+.attend-class-button a:active{
+    transform: scale(.97);
+}

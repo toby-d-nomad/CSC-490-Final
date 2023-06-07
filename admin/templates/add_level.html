@@ -1,0 +1,16 @@
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="generic-head-form-container">
+        <div class="generic-main-form--container">
+            <div class="generic-main-form-container-text">
+                <h1>Add Levels Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_level')}}" method="post" id="addLevel" class="generic-form">
+                <p><input type="text" required name="level_name" id="level_name" placeholder="Level"></p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="faculty-to-center">
+        <div class="faculty-head-form-container">
+            <div class="faculty-main-form--container">
+                <div class="faculty-main-form-container-text">
+                    <h1>Register A New Faculty Here</h1>
+                </div>
+                <form id="frmAddFaculty" method="post" action="{{url_for('admin.add_faculty')}}" class="add-faculty-form">
+                    <input type="text" id="faculty_name" name="faculty_name" required placeholder="Enter Faculty Name">
+                    <input type="text" id="faculty_name" name="faculty_code" required placeholder="Enter Faculty Code">
+                    <input type="text" id="faculty_name" name="faculty_description" required placeholder="Enter Faculty Description">
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

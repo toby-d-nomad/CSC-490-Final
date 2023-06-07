@@ -1,0 +1,10 @@
+{% extends 'instructor_index.html' %}
+
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+    <h1>instructor Test File</h1>
+    <a href="{{url_for('instructor.view_classes')}}">View Classes</a>
+    <a href="{{url_for('instructor.attend_classes')}}">Attend Classes</a>
+    <a href="{{url_for('instructor.logout')}}">Logout</a>
+{% endblock %}

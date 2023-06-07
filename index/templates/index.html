@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App || Index</title>
+    <link rel="stylesheet" href="{{url_for('admin.static', filename='css/styles.css')}}">
+</head>
+<body>
+    <div class="full-body-screen">
+        <div class="page-transbox">
+            <div class="central-div">
+                <h1>O-SAMS</h1>
+                <div class="seperate-buttons">
+                    <a href="{{url_for('student.student_login')}}">
+                        <span>Student Login</span>
+                    </a>
+                    <a href="{{url_for('instructor.instructor_login')}}">
+                        <span>Staff Login</span>
+                    </a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

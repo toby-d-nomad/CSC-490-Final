@@ -1,0 +1,37 @@
+{% extends 'student_index.html' %}
+
+{% block title %}Classes{% endblock %}
+
+{% block content %}
+    <div class="classes-content-holder">
+        <div class="classes-content">
+            <h1>Your Classes</h1>
+            <div class="classes-cards-holder">
+                {% for row in rows %}
+                    <form action="{{url_for('student.go_meet')}}" method="post">
+                        <input type="hidden" name="classid" id="classid" value="{{row.class_id}}">
+                        <input type="hidden" name="meetid" id="meetid" value="{{row.meetid}}">
+                        <div class="classes-cards">
+                            <div class="class-heading">
+                                <p class="code">{{row.course_code}}</p>
+                                <p class="name">{{row.course_name}}</p>
+                            </div>
+                            <div class="class-date">
+                                <p>{{row.class_date}}</p>
+                            </div>
+                            <div class="class-timing">
+                                <span>{{row.class_in}}</span>
+                                <span>To</span>
+                                <span>{{row.class_out}}</span>
+                            </div>
+                            <div class="attend-class-button">
+                                <button type="submit">Attend Class</button>
+                            </div>
+                        </div>
+                    </form>
+                {% endfor %}
+            </div>
+            {{message}}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('instructor.static', filename='css/instructor_login.css')}}">
+</head>
+<body>
+    <div class="full-screen-body">
+        <div class="instructor-login-transbox">
+            <div class="instructor-login-form-holder">
+                <div class="instructor-login-form">
+                    <h1>Staff Login</h1>
+                    <form action="{{url_for('instructor.instructor_login')}}" method="post">
+                        <span>Staff Registration Number</span>
+                        <p><input type="text" name="staff_reg_num" id="staff_reg_num" required placeholder="Staff Registration Number"></p>
+                        <span>Password</span>
+                        <p><input type="password" name="password" id="password" required placeholder="Password"></p>
+                        <video id="video" width="180" height="200" autoplay></video>
+                        <div class="capturedImageHolder" id="capturedImageHolder" style="display: none;"></div>
+                        <input type="hidden" name="staff_image" id="staff_image">
+                        <button id="capture-btn" type="button">Capture Image</button>
+                        <canvas id="canvas" width="180" height="200" style="display: none;"></canvas>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('instructor.static', filename='js/staffAuth.js')}}"></script>
+</body>
+</html>

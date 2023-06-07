@@ -1,0 +1,35 @@
+
+{% extends 'student_index.html' %}
+
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+    <div class="landing-box">
+        <div class="major-container">
+            <h1>Student Landing Page</h1>
+            <div class="container-link-holder">
+                <a href="{{url_for('student.register_courses')}}">
+                    <div class="container-link-card">
+                        <span>Register Courses</span>
+                    </div>
+                </a>
+                <a href="{{url_for('student.registered_courses')}}">
+                    <div class="container-link-card">
+                        <span>Registered Courses</span>
+                    </div>
+                </a>
+                <a href="{{url_for('student.attend_classes')}}">
+                    <div class="container-link-card">
+                        <span>Classes</span>
+                    </div>
+                </a>
+                <!-- <a href="{{url_for('video.index')}}">Go to the Video Meet</a> -->
+                <a href="{{url_for('student.logout')}}">
+                    <div class="container-link-card">
+                        <span>Log Out</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

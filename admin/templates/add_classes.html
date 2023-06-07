@@ -1,0 +1,19 @@
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="generic-head-form-container">
+        <div class="generic-main-form--container">
+            <div class="generic-main-form-container-text">
+                <h1>Add New Classes Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_classes')}}" method="post" id="addClasses" class="generic-form">
+                <input type="date" name="class_date" id="class_date" required placeholder="Class Date">
+                <input type="time" name="class_start" id="class_start" required placeholder="Class Start Time">
+                <input type="time" name="class_end" id="class_end" required placeholder="Class End Time">
+                <input type="text" name="course_id" id="course_id" required placeholder="Course Id">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.full-body-screen{
+    background-image: url('../img/background 2.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 100vh;
+    width: 1366px;
+}
+
+.full-body-screen-transbox{
+    background-color: rgba(30, 30, 30, 0.8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-holder{
+    background-color: rgba(27, 27, 27, 0.7);
+    /* width: 400px; */
+    display: flex;
+    padding: 80px 60px;
+    border-radius: 20px;
+}
+
+.student-login-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-login-form h1{
+    font-size: 36px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+form input{
+    width: 650px;
+    padding: 15px 10px;
+    border-radius: 50px;
+    border:  none;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form button{
+    background-color: #198754;
+    color: whitesmoke;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+form span{
+    color: whitesmoke;
+    font-size: 18px;
+    margin-left: 15px;
+}

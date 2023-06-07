@@ -1,0 +1,18 @@
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="generic-head-form-container">
+        <div class="generic-main-form--container">
+            <div class="generic-main-form-container-text">
+                <h1>Add New Sessions Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_session')}}" method="post" id="addSession" class="generic-form">
+                <input type="date" name="session_start" id="session_start" required placeholder="Session Start">
+                <input type="date" name="session_end" id="session_end" required placeholder="Session End">
+                <button type="submit">Submit</button>
+                {{message}}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

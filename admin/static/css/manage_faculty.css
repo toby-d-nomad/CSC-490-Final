@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.faculty-rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    border: 1px solid #191919;
+    border-radius: 20px;
+    margin: 2px 50px;
+}
+
+.faculty-rows-faculty-details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.faculty-rows-faculty-details span{
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.add-button-holder{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 80px;
+    align-items: center;
+}
+
+.add-button-holder button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #198754;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.faculty-rows-buttons button{
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: blue;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faculty-rows-buttons .delete-button{
+    background-color: red;
+    margin-left: 10px;
+}

@@ -1,0 +1,29 @@
+
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="generic-head-form-container">
+        <div class="generic-main-form--container">
+            <div class="generic-main-form-container-text">
+                <h1>Add New Departments Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_department')}}" method="post" id="addDepartment" class="generic-form">
+                <input type="text" name="department_name" id="department_name" required placeholder="Department Name">
+                <input type="text" name="department_code" id="department_code" required placeholder="Department Code">
+                <input type="text" name="department_description" id="department_description" required placeholder="Department Description">
+                <input type="text" name="faculty_id" id="faculty_id" required placeholder="Faculty id">
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- {% for row in rows %}
+        <div class="faculty-block">
+            <span>{{row.faculty_id}}</span>
+            <span>{{row.faculty_name}}</span>
+            <span>{{row.faculty_code}}</span>
+        </div>
+    {% endfor %} -->
+
+{% endblock %}

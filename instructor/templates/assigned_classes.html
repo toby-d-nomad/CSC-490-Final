@@ -1,0 +1,22 @@
+{% extends 'instructor_index.html' %}
+
+{% block title %}Assigned Classes{% endblock %}
+
+{% block content %}
+    <div class="assigned-classes-holder">
+        <div class="assigned-classes-content">
+            <h1>These are the Courses You've Been Assigned</h1>
+            {% for row in rows %}
+                <div class="assigned-courses-div">
+                    <div class="assigned-course-detail">
+                        <span class="code">{{row.course_code}}</span>
+                        <span>{{row.course_name}}</span>
+                    </div>
+                    <div class="number-of-students">
+                        <span>{{row.Number_Of_Students}}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div> 
+    </div>
+{% endblock %}

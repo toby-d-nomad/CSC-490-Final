@@ -1,0 +1,17 @@
+{% extends 'adding_form_template.html' %}
+
+{% block content %}
+    <div class="generic-head-form-container">
+        <div class="generic-main-form--container">
+            <div class="generic-main-form-container-text">
+                <h1>Add New Programmes Here</h1>
+            </div>
+            <form action="{{url_for('admin.add_programme')}}" method="post" id="addProgramme" class="generic-form">
+                <input type="text" name="programme_name" id="programme_name" required placeholder="Programme Name">
+                <input type="text" name="programme_duration" id="programme_durations" required placeholder="Programme Duration (in years)">
+                <input type="text" name="department_id" id="department_id" required placeholder="Department Id">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

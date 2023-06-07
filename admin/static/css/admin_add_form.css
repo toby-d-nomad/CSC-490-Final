@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* .add-student-form{
+
+} */
+
+.student-head-form-container, .faculty-head-form-container, .generic-head-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.student-main-form-container, .faculty-main-form--container, .generic-main-form--container{
+    background-color: #D9D9D9;
+    padding: 10px 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.student-main-form-container-text, .faculty-main-form-container-text, .generic-main-form-container-text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-student-form, .add-faculty-form, .generic-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-student-form input, .add-faculty-form input, .generic-form input{
+    padding: 12px 20px;
+    width: 650px;
+    border: 2px solid #191919;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.video-image-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.add-student-form button, .add-faculty-form button, .generic-form button{
+    padding: 15px 25px;
+    background-color: #198754;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+}
+
+.add-student-form button:hover, .add-faculty-form button:hover, .generic-form button:hover{
+    transform: scale(1.09);
+}
+
+.add-student-form button:active, .add-faculty-form button:active, .generic-form button:hover{
+    transform: scale(.95);
+}
+
+.faculty-to-center{
+    margin-top: 140px;
+}

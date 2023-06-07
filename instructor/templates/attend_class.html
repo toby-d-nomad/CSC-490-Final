@@ -1,0 +1,18 @@
+{% extends 'instructor_index.html' %}
+
+{% block title %}Attend Class{% endblock %}
+
+{% block content %}
+    <div class="attend-classes-holder">
+        <div class="attend-classes-content">
+            <h1>Your Classes</h1>
+            <div class="attend-classes-cards-holder">
+                {% for row in rows %}
+                    <form action="#" method="post">
+                        <input type="hidden" name="" id="">
+                    </form>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
