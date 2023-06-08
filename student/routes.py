@@ -10,8 +10,8 @@ import pyodbc
 
 student = Blueprint('student', __name__, url_prefix='/student', template_folder='templates', static_folder='static')
 sess = {
-      'student_logged_in': False,
-      'student_usertype': 'student'
+    'student_logged_in': False,
+    'student_usertype': 'student'
 }
 
 @student.before_request
@@ -170,13 +170,12 @@ def attend_classes():
         return render_template('classes.html', rows=rows)
     return redirect(url_for('index.main'))
 
-global classid
-global meetid
-
 @student.route('/go_meet', methods=['GET', 'POST'])
 def go_meet():
     classid=request.form.get("classid")
     meetid=request.form.get("meetid")
+    course_registration_id = request.form.get('course_registration_id')
+    session['course_registration_id'] = course_registration_id
     session['class_id'] = classid
     session['meet_id'] = meetid
     return redirect(url_for('video.meeting', uid=meetid))
@@ -186,11 +185,12 @@ def take_attendance():
     if request.method == 'POST':
         student_id = session['student_id']
         class_id = session['class_id']
+        course_registration_id = session['course_registration_id']
         # class_id = 
         conn  = connection()
         cur = conn.cursor()
         stored_proc = 'Exec spCRUDStudent_Attendance @student_attendance_id=?, @student_id=?, @course_registration_id=?, @class_id=?, @StatementType=?'
-        param = '1', student_id, '8', class_id, 'INSERT'
+        param = '1', student_id, course_registration_id, class_id, 'INSERT'
         cur.execute(stored_proc, param)
         cur.close()
         conn.commit()

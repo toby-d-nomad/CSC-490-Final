@@ -47,47 +47,47 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.registered-course-holder{
+.assigned-classes-holder{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 70px;
 }
 
-.registered-course-holder h1{
-    font-size: 56px;
+.assigned-classes-content h1{
     font-family: monospace;
+    font-size: 48px;
     color: #198754;
-    margin-top: 60px;
+    font-weight: bolder;
+    margin-bottom: 20px;
 }
 
-
-.registered-courses-div{
+.assigned-courses-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 30px 0;
-    padding: 10px 100px;
-    border-bottom: 2px solid #191919;
-    border-radius: 40px;
-}
-
-.registered-courses-div span{
-    font-size: 20px;
-    color: #198754;
-    margin-right: 30px;
+    border-bottom: 3px #198754 solid;
+    border-radius: 25px;
+    padding: 10px 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.registered-courses-div .code{
+.assigned-course-detail{
+    color: #198754;
+    font-size: 22px;
+}
+
+.assigned-course-detail .code{
     font-weight: bolder;
 }
 
-.text-if-nothing{
-    text-align: center;
-    font-family: monospace;
-    font-size: 26px;
-    margin: 60px;
+.number-of-students{
     color: #198754;
+    font-size: 22px;
 }
 
-.classes-cards{
+.attend-classes-cards{
     border: 2px solid #198754;
     width: 250px;
     height: 300px;
@@ -98,35 +98,35 @@
     padding: 0 20px;
 }
 
-.classes-content{
+.attend-classes-content{
     margin-top: 30px;
 }
 
-.classes-content-holder{
+.attend-classes-content-holder{
     display: flex;
     justify-content: center;
 }
 
-.classes-content h1{
+.attend-classes-content h1{
     color: #198754;
     font-family: monospace;
     font-size: 36px;
     text-align: center;
 }
 
-.classes-cards{
+.attend-classes-cards{
     font-family: Arial, Helvetica, sans-serif;
     color: #c65113;
 }
 
-.classes-cards-holder{
+.attend-classes-cards-holder{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 80px;
 }
 
-.class-heading{
+.attend-classes-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,14 +134,13 @@
     margin-bottom: 20px;
 }
 
-.class-heading .code{
+.attend-classes-heading .code{
     font-weight: bolder;
     font-size: 18px;
 }
 
-.class-heading .name{
+.attend-classes-heading .name{
     text-align: right;
-
 }
 
 .class-date{
@@ -159,6 +158,7 @@
     justify-content: end;
 }
 
+
 .attend-class-button button{
     padding: 14px 22px;
     border-radius: 30px;
@@ -169,10 +169,18 @@
     cursor: pointer;
 }
 
-.attend-class-button a:hover{
+.attend-class-button button:hover{
     transform: scale(1.07);
 }
 
-.attend-class-button a:active{
+.attend-class-button button:active{
     transform: scale(.97);
+}
+
+.text-if-nothing{
+    text-align: center;
+    font-family: monospace;
+    font-size: 26px;
+    margin: 60px;
+    color: #198754;
 }

@@ -1,7 +1,7 @@
 import base64
 from functools import wraps
 import cv2
-from flask import Blueprint, flash, render_template, request, redirect, session, url_for
+from flask import Blueprint, flash, jsonify, render_template, request, redirect, session, url_for
 from connection.controller import connection
 import pyodbc
 import numpy as np
@@ -111,6 +111,29 @@ def attend_classes():
         conn.close()
         return render_template('attend_class.html', rows=rows)
     return redirect(url_for('index.main'))
+
+@instructor.route('/go-meet', methods=['GET', 'POST'])
+def go_meet():
+    class_id = request.form.get('class_id')
+    meet_id = request.form.get('meetid')
+    session['class_id'] = class_id
+    session['meet_id'] = meet_id
+    return redirect(url_for('video.meeting', uid=meet_id))
+
+@instructor.route('/take-attendance', methods=['GET', 'POST'])
+def take_attendance():
+    if request.method == 'POST':
+        staff_id = sess['staff_id']
+        class_id = session['class_id']
+        conn = connection()
+        cur = conn.cursor()
+        stored_proc = 'Exec spCRUDStaff_Attendance @staff_attendance_id=?, @staff_id=?, @class_id=?, @StatementType=?'
+        param = '1', staff_id, class_id, 'INSERT'
+        cur.execute(stored_proc, param)
+        cur.close()
+        conn.commit()
+        return jsonify({'message':'success'})
+    return render_template('attend_class.html')
 
 
 @instructor.route('/logout')

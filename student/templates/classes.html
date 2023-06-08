@@ -10,7 +10,8 @@
                 {% for row in rows %}
                     <form action="{{url_for('student.go_meet')}}" method="post">
                         <input type="hidden" name="classid" id="classid" value="{{row.class_id}}">
-                        <input type="hidden" name="meetid" id="meetid" value="{{row.meetid}}">
+                        <input type="hidden" name="meetid" id="meetid" value="{{row.meet_id}}">
+                        <input type="hidden" name="course_registration_id" id="course_registration_id" value="{{row.course_registration_id}}">
                         <div class="classes-cards">
                             <div class="class-heading">
                                 <p class="code">{{row.course_code}}</p>

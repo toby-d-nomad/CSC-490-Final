@@ -9,7 +9,25 @@
             <div class="attend-classes-cards-holder">
                 {% for row in rows %}
                     <form action="#" method="post">
-                        <input type="hidden" name="" id="">
+                        <input type="hidden" name="class_id" id="class_id" value="{{row.class_id}}">
+                        <input type="hidden" name="meetid" id="meetid" value="{{row.meet_id}}">
+                        <div class="attend-classes-cards">
+                            <div class="attend-classes-heading">
+                                <p class="code">{{row.course_code}}</p>
+                                <p class="name">{{row.course_name}}</p>
+                            </div>
+                            <div class="class-date">
+                                <p>{{row.class_date}}</p>
+                            </div>
+                            <div class="class-timing">
+                                <span>{{row.class_in}}</span>
+                                <span>To</span>
+                                <span>{{row.class_out}}</span>
+                            </div>
+                            <div class="attend-class-button">
+                                <button type="submit">Attend Class</button>
+                            </div>
+                        </div>
                     </form>
                 {% endfor %}
             </div>

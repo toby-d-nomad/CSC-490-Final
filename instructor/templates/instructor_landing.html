@@ -3,8 +3,26 @@
 {% block title %}Landing Page{% endblock %}
 
 {% block content %}
-    <h1>instructor Test File</h1>
-    <a href="{{url_for('instructor.view_classes')}}">View Classes</a>
-    <a href="{{url_for('instructor.attend_classes')}}">Attend Classes</a>
-    <a href="{{url_for('instructor.logout')}}">Logout</a>
+    <div class="landing-box">
+        <div class="major-container">
+            <h1>Instructor Landing Page</h1>
+            <div class="container-link-holder">
+                <a href="{{url_for('instructor.view_classes')}}">
+                    <div class="container-link-card">
+                        <span>View Classes</span>
+                    </div>
+                </a>
+                <a href="{{url_for('instructor.attend_classes')}}">
+                    <div class="container-link-card">
+                        <span>Attend Classes</span>
+                    </div>
+                </a>
+                <a href="{{url_for('instructor.logout')}}">
+                    <div class="container-link-card">
+                        <span>Logout</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
