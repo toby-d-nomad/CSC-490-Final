@@ -175,17 +175,17 @@ def go_meet():
     classid=request.form.get("classid")
     meetid=request.form.get("meetid")
     course_registration_id = request.form.get('course_registration_id')
-    session['course_registration_id'] = course_registration_id
-    session['class_id'] = classid
-    session['meet_id'] = meetid
+    sess['course_registration_id'] = course_registration_id
+    sess['class_id'] = classid
+    sess['meet_id'] = meetid
     return redirect(url_for('video.meeting', uid=meetid))
 
 @student.route('/take-attendance', methods=['GET', 'POST'])
 def take_attendance():
     if request.method == 'POST':
-        student_id = session['student_id']
-        class_id = session['class_id']
-        course_registration_id = session['course_registration_id']
+        student_id = sess['student_id']
+        class_id = sess['class_id']
+        course_registration_id = sess['course_registration_id']
         # class_id = 
         conn  = connection()
         cur = conn.cursor()

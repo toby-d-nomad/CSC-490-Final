@@ -116,15 +116,15 @@ def attend_classes():
 def go_meet():
     class_id = request.form.get('class_id')
     meet_id = request.form.get('meetid')
-    session['class_id'] = class_id
-    session['meet_id'] = meet_id
+    sess['class_id'] = class_id
+    sess['meet_id'] = meet_id
     return redirect(url_for('video.meeting', uid=meet_id))
 
 @instructor.route('/take-attendance', methods=['GET', 'POST'])
 def take_attendance():
     if request.method == 'POST':
         staff_id = sess['staff_id']
-        class_id = session['class_id']
+        class_id = sess['class_id']
         conn = connection()
         cur = conn.cursor()
         stored_proc = 'Exec spCRUDStaff_Attendance @staff_attendance_id=?, @staff_id=?, @class_id=?, @StatementType=?'
