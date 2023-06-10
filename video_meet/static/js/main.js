@@ -41,7 +41,7 @@ window.onload = () => {
             'info'
         )
         setTimeout(function () {
-            window.location = "/video/"
+            window.location = "student/classes/"
         }, 2000);
 
     })
